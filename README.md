@@ -7,7 +7,7 @@ Python script as a wrapper for Aviatrix API
 ```
 from aviatrix import Aviatrix
 
-controller = 'x.x.x.x'
+controller_ip = 'x.x.x.x'
 username = 'admin'
 password = 'password'
 
@@ -19,7 +19,7 @@ controller.login(username,password)
 ```
 from aviatrix import Aviatrix
 
-controller = 'x.x.x.x'
+controller_ip = 'x.x.x.x'
 username = 'admin'
 password = 'password'
 admin_email = 'test@acme.com'
@@ -41,7 +41,7 @@ controller.setup_account_profile("<<AWS Account Name>>",
 ```
 from aviatrix import Aviatrix
 
-controller = 'x.x.x.x'
+controller_ip = 'x.x.x.x'
 username = 'admin'
 password = 'password'
 gateway_name = 'GatewayName'
@@ -65,7 +65,7 @@ controller.create_gateway("AWSAccount",
 ```
 from aviatrix import Aviatrix
 
-controller = 'x.x.x.x'
+controller_ip = 'x.x.x.x'
 username = 'admin'
 password = 'password'
 gateway_name =
