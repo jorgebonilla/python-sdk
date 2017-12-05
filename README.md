@@ -1,6 +1,9 @@
 # python-sdk
 Python script as a wrapper for Aviatrix API
 
+### Status
+[![Build Status](https://travis-ci.org/jorgebonilla/python-sdk.svg?branch=master)](https://travis-ci.org/jorgebonilla/python-sdk)
+
 ## Usage examples:
 
 #### Login to controller:
