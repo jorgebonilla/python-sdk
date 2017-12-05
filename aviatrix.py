@@ -1,6 +1,7 @@
 from urllib2 import Request, urlopen, URLError
 from time import sleep
 import urllib, ssl, json, logging
+import os
 
 class Aviatrix:
     logging.basicConfig(filename="./aviatrix.log",level="INFO")
@@ -126,3 +127,12 @@ class Aviatrix:
                                                     "username": username,
                                                     "user_email": user_email,
                                                     "profile_name": profile_name })
+
+
+def test_login():
+    controller_ip=os.environ.get("CONTROLLER")
+    username=os.environ.get("CONTROLLER_USERNAME")
+    password=os.environ.get("CONTROLLER_PASSWORD")
+    controller = Aviatrix(controller_ip)
+    controller.login(username,password)
+    assert controller.results.find("authorized successfully") != -1
