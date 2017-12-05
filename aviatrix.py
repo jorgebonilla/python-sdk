@@ -116,6 +116,10 @@ class Aviatrix:
     def list_peers_vpc_pairs(self):
         self.avx_api_call("GET", "list_peer_vpc_pairs", { "CID": self.CID })
 
+    def list_vpcs_summary(self,account_name):
+        self.avx_api_call("GET", "list_vpcs_summary", { "CID": self.CID,
+                                                        "account_name": account_name })
+
     def add_vpn_user(self,vpc_id,username,user_email,profile_name):
         self.avx_api_call("GET", "add_vpn_user", {  "CID": self.CID,
                                                     "vpc_id": vpc_id,
